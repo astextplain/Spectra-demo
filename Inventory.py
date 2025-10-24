@@ -18,30 +18,30 @@ def order():
     your_order(your_order_input)
 
 
-def add_item_inventory():
-    file = r"D:\Dwonloads\inventory.csv"
-    data = pd.read_csv(file)
-    data1 = pd.DataFrame(data)
-    print(data1)
-    x = int(input("How many items to add: "))
-    item_name_add_list = []
-    item_units_add_list = []
-    item_price_add_list = []
+# def add_item_inventory():
+#     file = r"D:\Dwonloads\inventory.csv"
+#     data = pd.read_csv(file)
+#     data1 = pd.DataFrame(data)
+#     print(data1)
+#     x = int(input("How many items to add: "))
+#     item_name_add_list = []
+#     item_units_add_list = []
+#     item_price_add_list = []
 
-    for i in range(x):
-        Item_Name = input("Enter Item to add: ")
-        item_name_add_list.append(Item_Name)
-        Units_Available = int(input("Enter Units Available for the item: "))
-        item_units_add_list.append(Units_Available)
-        Price_unit = float(input("Enter price for Item_Name: "))
-        item_price_add_list.append(Price_unit)
-    df = {
-        "Item Name": item_name_add_list,
-        "Units Available": item_units_add_list,
-        "Price/unit": item_price_add_list,
-    }
-    dataframe = pd.DataFrame(df)
-    dataframe.to_csv(file, mode="a", header=False, index=False)
+#     for i in range(x):
+#         Item_Name = input("Enter Item to add: ")
+#         item_name_add_list.append(Item_Name)
+#         Units_Available = int(input("Enter Units Available for the item: "))
+#         item_units_add_list.append(Units_Available)
+#         Price_unit = float(input("Enter price for Item_Name: "))
+#         item_price_add_list.append(Price_unit)
+#     df = {
+#         "Item Name": item_name_add_list,
+#         "Units Available": item_units_add_list,
+#         "Price/unit": item_price_add_list,
+#     }
+#     dataframe = pd.DataFrame(df)
+#     dataframe.to_csv(file, mode="a", header=False, index=False)
     print("Data appended successfully")
 
 
@@ -195,6 +195,7 @@ elif a == 2:
     create_user(username, password)
 else:
     print("Invalid_input")
+
 
 
 
